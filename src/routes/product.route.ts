@@ -13,7 +13,6 @@ export const productRoute = (req: IncomingMessage, res: ServerResponse) => {
     else if (url?.startsWith("/products")) {
         // res.end(JSON.stringify({message: "This is product route"}))
         console.log(req);
-        
         productController(req, res);
     }
     else {
