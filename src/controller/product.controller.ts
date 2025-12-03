@@ -1,8 +1,9 @@
 import { IncomingMessage, ServerResponse } from "http";
-import { readProduct } from "../services/product.service";
+import { readProduct, writeProduct } from "../services/product.service";
 import { IProduct } from "../types/product.interface";
+import { parseBody } from "../utility/parseBody";
 
-export const productController = (req: IncomingMessage, res: ServerResponse) => {
+export const productController = async (req: IncomingMessage, res: ServerResponse) => {
     const url = req.url;
     const method = req.method;
     const urlPart = url?.split("/");
@@ -23,6 +24,13 @@ export const productController = (req: IncomingMessage, res: ServerResponse) => 
     }
     // * Post Method
     else if (method === 'POST' && url === "/products") {
-        
+        const body = await parseBody(req);
+        const products = readProduct();
+        const newProduct = {
+            id: Date.now(),
+            ...body
+        }
+        products.push(newProduct);
+        writeProduct(products);
     }
 }

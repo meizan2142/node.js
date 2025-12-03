@@ -8,5 +8,17 @@
         "id": 2,
         "name": "t-shirt",
         "color": "white"
+    },
+    {
+        "id": 1764744305549,
+        "name": "car"
+    },
+    {
+        "id": 1764744349128,
+        "name": "YoYo"
+    },
+    {
+        "id": 1764744414783,
+        "name": "console"
     }
 ]

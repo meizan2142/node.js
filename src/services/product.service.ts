@@ -9,4 +9,6 @@ export function readProduct() {
     return JSON.parse(data);
 }
 
-readProduct();
+export const writeProduct = (product: any) => {
+    fs.writeFileSync(filePath, JSON.stringify(product));
+}
