@@ -1,21 +1,10 @@
 [
     {
-        "id": 1,
-        "name": "jersey",
-        "color": "red"
-    },
-    {
         "id": 2,
-        "name": "t-shirt",
-        "color": "white"
+        "name": "sneakers"
     },
     {
-        "id": 1764744305549,
-        "name": "car"
-    },
-    {
-        "id": 1764744349128,
-        "name": "YoYo"
+        "name": "jeep"
     },
     {
         "id": 1764744414783,
